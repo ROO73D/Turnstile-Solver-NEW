@@ -470,7 +470,7 @@ class TurnstileAPIServer:
         captchaDiv.className = 'cf-turnstile';
         captchaDiv.setAttribute('data-sitekey', '{websiteKey}');
         captchaDiv.setAttribute('data-callback', 'onCaptchaSuccess');
-        captchaDiv.setAttribute('data-action', '');
+        captchaDiv.setAttribute('data-action', '{action}');
 
         overlay.appendChild(captchaDiv);
         document.body.appendChild(overlay);
