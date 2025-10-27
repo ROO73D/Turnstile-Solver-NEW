@@ -201,10 +201,7 @@ class TurnstileAPIServer:
         for i in range(self.thread_count):
             config = browser_configs[i]
             
-            browser_args = [
-                "--window-position=0,0",
-                "--force-device-scale-factor=1"
-            ]
+            browser_args = []
             if config['useragent']:
                 browser_args.append(f"--user-agent={config['useragent']}")
             
@@ -610,21 +607,21 @@ class TurnstileAPIServer:
 
         page = await context.new_page()
         
-        await self._antishadow_inject(page)
+        #await self._antishadow_inject(page)
         
         await self._block_rendering(page)
         
-        await page.add_init_script("""
-        Object.defineProperty(navigator, 'webdriver', {
-            get: () => undefined,
-        });
+        #await page.add_init_script("""
+        #Object.defineProperty(navigator, 'webdriver', {
+        #    get: () => undefined,
+        #});
         
-        window.chrome = {
-            runtime: {},
-            loadTimes: function() {},
-            csi: function() {},
-        };
-        """)
+        #window.chrome = {
+        #    runtime: {},
+        #    loadTimes: function() {},
+        #    csi: function() {},
+        #};
+        ##""")
         
         if self.browser_type in ['chromium', 'chrome', 'msedge']:
             await page.set_viewport_size({"width": 500, "height": 100})
