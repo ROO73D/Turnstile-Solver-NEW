@@ -32,4 +32,4 @@ EXPOSE 8080
 
 # ---- Command to run app ----
 # Modify "main.py" if the entrypoint differs
-CMD ["python", "main.py"]
+CMD ["python", "api_solver.py"]
