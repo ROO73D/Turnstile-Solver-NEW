@@ -32,4 +32,4 @@ EXPOSE 8080
 
 # ---- Command to run app ----
 # Modify "main.py" if the entrypoint differs
-CMD ["python", "api_solver.py","--proxy 'http://8Rq3epdfG:a4RGvndRV@45.129.79.111:61854'"]
+CMD ["python", "api_solver.py --proxy 'http://8Rq3epdfG:a4RGvndRV@45.129.79.111:61854'"]
