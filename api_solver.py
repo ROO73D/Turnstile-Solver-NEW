@@ -70,8 +70,8 @@ class TurnstileAPIServer:
         self.proxy_support = proxy_support
         self.browser_pool = asyncio.Queue()
         self.use_random_config = use_random_config
-        self.browser_name = browser_name
-        self.browser_version = browser_version
+        self.browser_name = "chrome"
+        self.browser_version = 142
         self.console = Console()
         
         # Initialize useragent and sec_ch_ua attributes
