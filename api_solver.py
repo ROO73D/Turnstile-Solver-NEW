@@ -500,7 +500,7 @@ class TurnstileAPIServer:
             if self.debug:
                 logger.warning(f"Browser {index}: Cannot check browser state: {str(e)}")
 
-        if self.proxy_support:
+        if True:
             proxy_file_path = os.path.join(os.getcwd(), "proxies.txt")
 
             try:
