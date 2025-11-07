@@ -20,7 +20,7 @@ COPY . .
 
 # ---- Install Python dependencies ----
 # (requirements.txt must exist in repo root)
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 RUN python -m patchright install chromium
 # ---- Environment variables ----
 # Adjust these as per repo (you can add keys, ports, etc.)
